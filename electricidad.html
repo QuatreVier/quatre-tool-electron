@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Electricidad</title>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+  <h2>Electricidad - Ley de Ohm</h2>
+  <p>Resistencia = Voltaje / Corriente</p>
+
+  <input type="number" id="voltaje" placeholder="Voltaje (V)">
+  <input type="number" id="corriente" placeholder="Corriente (A)">
+  <br>
+  <button onclick="calcular()" id="boton">Calcular</button>
+  <div id="resultado"></div>
+
+  <br>
+  <button onclick="volver()" id="boton">Volver al menú</button>
+
+  <script src="renderer.js"></script>
+  <script>
+    function volver() {
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  background-color: black;
+}
+
+p {
+  color: white;
+}
+
+h1, h2 {
+  color: darkblue;
+}
+
+input {
+  margin: 5px;
+  padding: 5px;
+  width: 120px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#boton {
+  background-color: blueviolet;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#systemBtn {
+    background-color: blueviolet;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}

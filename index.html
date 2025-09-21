@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Quatre Tool</title>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+  <img src="./img/logo.png" alt="Quatre Tool">
+  <p>Elige una sección:</p>
+
+  <button onclick="navegar('electricidad.html')" id="boton">Electricidad</button>
+  <button onclick="navegar('sistema.html')" id="boton">Sistema</button>
+  <button onclick="navegar('utilidades.html')" id="boton">Utilidades</button>
+
+  <script>
+    function navegar(pagina) {
+      window.location.href = pagina;
+    }
+  </script>
+</body>
+</html>
