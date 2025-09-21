@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, Menu, dialog } = require("electron");
 const path = require("path");
 
 function createWindow() {
@@ -12,7 +12,38 @@ function createWindow() {
   win.maximize();
   win.show();
   win.loadFile("index.html");
+  const menuTemplate = [
+    {
+      label: "Archivo",
+      submenu: [
+        {
+          label: "Salir",
+          accelerator: process.platform === "darwin" ? "Cmd+Q" : "Ctrl+Q",
+          click: () => app.quit()
+        }
+      ]
+    },
+    {
+      label: "Ayuda",
+      submenu: [
+        {
+          label: "Acerca de",
+          click: () => {
+            dialog.showMessageBox(win, {
+              type: "info",
+              title: "Acerca de Quatre-Tool",
+              message: "Quatre-Tool v0.1\nHerramienta de estudio desarrollada en Electron.",
+              buttons: ["Cerrar"]
+            });
+          }
+        }
+      ]
+    }
+  ];
+  const customMenu = Menu.buildFromTemplate(menuTemplate);
+  Menu.setApplicationMenu(customMenu);
 }
+
 
 app.whenReady().then(() => {
   createWindow();
