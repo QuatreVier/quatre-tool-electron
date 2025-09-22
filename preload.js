@@ -1,6 +1,7 @@
 const { contextBridge } = require("electron");
 const si = require("systeminformation");
 
+//importacion y API de systemAPI
 contextBridge.exposeInMainWorld("systemAPI", {
   getSystemInfo: async () => {
     const cpu = await si.cpu();
@@ -16,4 +17,10 @@ contextBridge.exposeInMainWorld("systemAPI", {
       os: os.distro + " " + os.release
     };
   }
+});
+
+// Importacion y API de Katex
+const katex = require('katex');
+contextBridge.exposeInMainWorld('katexAPI', {
+  render: (formula) => katex.renderToString(formula, { throwOnError: false })
 });

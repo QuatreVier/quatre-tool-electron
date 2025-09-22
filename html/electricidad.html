@@ -3,25 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>Electricidad</title>
-  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../node_modules/katex/dist/katex.min.css">
 </head>
 <body>
   <h2>Electricidad - Ley de Ohm</h2>
-  <p>Resistencia = Voltaje / Corriente</p>
+  <p id="formula"></p>
 
   <input type="number" id="voltaje" placeholder="Voltaje (V)">
   <input type="number" id="corriente" placeholder="Corriente (A)">
+  <input type="number" id="resistencia" placeholder="Resistencia (Ω)">
   <br>
-  <button onclick="calcular()" id="boton">Calcular</button>
+  <button id="btnCalcular" id="boton">Calcular</button>
   <div id="resultado"></div>
-
   <br>
   <button onclick="volver()" id="boton">Volver al menú</button>
 
-  <script src="./scripts/electricidad/ohm.js"></script>
+  <script src="../scripts/electricidad/ohm.js"></script>
   <script>
     function volver() {
-      window.location.href = "index.html";
+      window.location.href = "../index.html";
     }
   </script>
 </body>

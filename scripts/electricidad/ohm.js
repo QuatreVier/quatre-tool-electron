@@ -1,15 +1,36 @@
-function calcular() {
-  const voltaje = parseFloat(document.getElementById("voltaje").value);
-  const corriente = parseFloat(document.getElementById("corriente").value);
-  const resultadoDiv = document.getElementById("resultado");
+window.addEventListener('DOMContentLoaded', () => {
+  const formulaElement = document.getElementById("formula");
+  formulaElement.innerHTML = window.katexAPI.render("V = I \\times R");
 
-  if (isNaN(voltaje) || isNaN(corriente) || corriente === 0) {
-    resultadoDiv.textContent = "Por favor ingresa valores válidos.";
-    resultadoDiv.style.color = "red";
-    return;
-  }
+  const btn = document.getElementById("btnCalcular");
+  const voltInput = document.getElementById("voltaje");
+  const corrInput = document.getElementById("corriente");
+  const resInput = document.getElementById("resistencia");
+  const resultado = document.getElementById("resultado");
 
-  const resistencia = voltaje / corriente;
-  resultadoDiv.textContent = `Resistencia: ${resistencia.toFixed(2)} Ω`;
-  resultadoDiv.style.color = "blue";
-}
+  btn.addEventListener('click', () => {
+    const V = parseFloat(voltInput.value);
+    const I = parseFloat(corrInput.value);
+    const R = parseFloat(resInput.value);
+    let formula = "";
+    let resText = "";
+
+    if (V && I) {
+      const volt = I * R;
+      formula = `V = I \\times R = ${I} \\times ${R} = ${(I*R).toFixed(2)} V`;
+      resText = window.katexAPI.render(formula);
+    } else if (V && R) {
+      const corriente = V / R;
+      formula = `I = V / R = ${V} / ${R} = ${(V/R).toFixed(2)} A`;
+      resText = window.katexAPI.render(formula);
+    } else if (I && R) {
+      const voltaje = I * R;
+      formula = `V = I \\times R = ${I} \\times ${R} = ${voltaje.toFixed(2)} V`;
+      resText = window.katexAPI.render(formula);
+    } else {
+      resText = "Ingresa al menos dos valores para calcular el tercero";
+    }
+
+    resultado.innerHTML = resText;
+  });
+});
