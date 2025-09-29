@@ -1,0 +1,19 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/bootstrap";
+
+.bg-indigo {
+  background-color: $indigo;
+  color: white;
+}
+
+
+.btn-indigo {
+  background-color: $indigo;
+  color: white;
+  border: 1px solid $indigo;
+  &:hover {
+    background-color: darken($indigo, 10%);
+  }
+}
