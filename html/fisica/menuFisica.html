@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Algebra</title>
+  <link rel="stylesheet" href="../../styles/style.css">
+  <link rel="stylesheet" href="../node_modules/katex/dist/katex.min.css">
+</head>
+<body>
+  <h2>Fisica</h2>
+  <p>Ire metiendo mas secciones</p>
+  <br>
+  <button id="boton" onclick="navegar('./electricidad.html')" id="boton">Ley de Ohm</button>
+  <br>
+  <button onclick="volver()" id="boton">Volver al menú</button>
+  <script>
+    function volver() {
+      window.location.href = "../../index.html";
+    }
+    function navegar(pagina) {
+      window.location.href = pagina;
+    }
+  </script>
+</body>
+</html>

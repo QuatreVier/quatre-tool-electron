@@ -13,7 +13,7 @@
     "electron": "^38.1.2"
   },
   "dependencies": {
-    "katex": "^0.16.22",
-    "systeminformation": "^5.27.10"
+    "bootstrap": "^5.3.8",
+    "katex": "^0.16.22"
   }
 }

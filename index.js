@@ -18,7 +18,7 @@ function createWindow() {
       submenu: [
         {
           label: "Salir",
-          accelerator: process.platform === "darwin" ? "Cmd+Q" : "Ctrl+Q",
+          accelerator: process.platform === "darwin" ? "Cmd+W" : "Ctrl+W",
           click: () => app.quit()
         }
       ]
