@@ -2,8 +2,8 @@
 <html lang="es" data-bs-theme="dark">
 
 <head>
-  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
   <title>Noesis</title>
   <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
@@ -12,12 +12,11 @@
   <script defer src="../../node_modules/katex/dist/contrib/auto-render.min.js"
     onload="renderMathInElement(document.body);"></script>
   <link rel="stylesheet" href="../../styles/custom.css">
+  <link rel="stylesheet" href="../../styles/index.css">
 </head>
 
 <body>
-  <!--Barra de navegacion -->
   <div id="navbar-container"></div>
-  <!-- Script para inyectar la barra de navegacion -->
   <script>
     fetch("../../components/navbar.html")
       .then(res => res.text())
@@ -26,28 +25,21 @@
       .then(res => res.text())
       .then(data => document.getElementById("footer-container").innerHTML = data);
   </script>
-  <!-- Formulas -->
-  <div class="formula-section mt-5">
-    <h3><i class="bi bi-calculator"></i> Fórmulas</h3>
-    <p>
-      Ejemplos renderizados con KaTeX (local desde npm):
-    </p>
-    <div class="formula-preview">
-      <p>
-        \( a^0 = 1 \) <br>
-        \(a^1 = a \) <br>
-        \( a^m \cdot a^n = a^{m+n} \) <br>
-        \( \frac{a^m}{a^n} = a^{m-n} \) <br>
-        \( (a^m)^n = a^{m \cdot n} \) <br>
-        \( (a \cdot b)^n = a^n \cdot b^n \) <br>
-        \( \left(\frac{a}{b}\right)^n = \frac{a^n}{b^n} \) <br>
-        \( a^{-n} = \frac{1}{a^n} \) <br>
-        \( a^{\frac{m}{n}} = \sqrt[n]{a^m} \) <br>
-      </p>
-    </div>
-  </div>
+  <h2>Fisica</h2>
+  <p>Ire metiendo mas secciones</p>
+  <br>
+  <button id="boton" onclick="navegar('./ohm.html')" id="boton">Ley de Ohm</button>
+  <br>
+  <button onclick="volver()" id="boton">Volver al menú</button>
+  <script>
+    function volver() {
+      window.location.href = "../../index.html";
+    }
+    function navegar(pagina) {
+      window.location.href = pagina;
+    }
+  </script>
   <div id="footer-container"></div>
-  <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

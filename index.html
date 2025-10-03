@@ -1,27 +1,49 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
 
 <head>
   <meta charset="UTF-8">
-  <title>Quatre Tool</title>
-  <link rel="stylesheet" href="./styles/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noesis</title>
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="./styles/index.css">
+  <script>
+    fetch("./components/footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer-container").innerHTML = data);
+  </script>
 </head>
 
-<body data-bs-theme="dark">
-  <img src="./img/logo.png" alt="Quatre Tool">
-  <p>Elige una sección:</p>
+<body>
+  <header class="text-center my-5">
+    <img src="./img/logo.png" alt="Logo Noesis" class="img-fluid mb-3">
+    <h1 class="fw-bold display-4">Noesis</h1>
+    <p class="lead">Explora y aprende</p>
+  </header>
 
-  <button onclick="navegar('./html/fisica/menuFisica.html')" id="boton">Fisica</button>
-  <button onclick="navegar('./html/utilidades.html')" id="boton">Utilidades</button>
-  <button onclick="navegar('./html/algebra/menuAlgebra.html')" id="boton">Algebra</button>
-
-  <script>
-    function navegar(pagina) {
-      window.location.href = pagina;
-    }
-  </script>
+  <main class="container menu-container text-center my-5">
+    <p class="mb-4 fs-5">Elige una sección:</p>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <a href="./html/fisica/index.html" class="btn btn-outline-light w-100 menu-btn">
+          <i class="bi bi-lightning-fill me-2"></i> Física
+        </a>
+      </div>
+      <div class="col">
+        <a href="./html/algebra/index.html" class="btn btn-outline-light w-100 menu-btn">
+          <i class="bi bi-calculator-fill me-2"></i> Álgebra
+        </a>
+      </div>
+      <div class="col">
+        <a href="./html/geometria/index.html" class="btn btn-outline-light w-100 menu-btn">
+          <i class="bi bi-tools me-2"></i> Geometría
+        </a>
+      </div>
+    </div>
+  </main>
+  <div id="footer-container"></div>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 </html>

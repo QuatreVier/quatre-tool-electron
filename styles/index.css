@@ -1,0 +1,29 @@
+body {
+    background: linear-gradient(135deg, #1e1e2f, #3a3a5c);
+    color: white;
+    min-height: 100vh;
+}
+
+.menu-container {
+    background-color: rgba(102, 16, 242, 0.85);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.menu-btn {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+    border-radius: 0.75rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.menu-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+header img {
+    max-width: 180px;
+}

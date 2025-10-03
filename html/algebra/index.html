@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noesis</title>
+  <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../../node_modules/katex/dist/katex.min.css">
+  <script defer src="../../node_modules/katex/dist/katex.min.js"></script>
+  <script defer src="../../node_modules/katex/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body);"></script>
+  <link rel="stylesheet" href="../../styles/custom.css">
+  <link rel="stylesheet" href="../../styles/index.css">
+</head>
+
+<body>
+  <!-- Barra de navegacion -->
+
+  <body>
+    <div id="navbar-container"></div>
+    <!-- Script para inyectar la barra de navegacion -->
+    <script>
+      fetch("../../components/navbar.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("navbar-container").innerHTML = data);
+      fetch("../../components/footer.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("footer-container").innerHTML = data);
+    </script>
+    <main class="container menu-container text-center my-5">
+      <p class="mb-4 fs-5">Elige una sección:</p>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <a href="./exponentes.html" class="btn btn-outline-light w-100 menu-btn">
+            <i class="bi bi-superscript"></i> Exponentes
+          </a>
+        </div>
+        <div class="col">
+          <a href="./Mcd.html" class="btn btn-outline-light w-100 menu-btn">
+            <i class="bi bi-calculator-fill me-2"></i> Maximo comun divisor
+          </a>
+        </div>
+        <div class="col">
+          <a href="../../index.html" class="btn btn-outline-light w-100 menu-btn">
+            <i class="bi bi-house-door"></i> Volver al menu principal
+          </a>
+        </div>
+      </div>
+    </main>
+    <div id="footer-container"></div>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+
+</html>

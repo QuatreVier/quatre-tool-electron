@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Noesis</title>
+
   <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
   <link rel="stylesheet" href="../../node_modules/katex/dist/katex.min.css">
@@ -12,10 +13,11 @@
   <script defer src="../../node_modules/katex/dist/contrib/auto-render.min.js"
     onload="renderMathInElement(document.body);"></script>
   <link rel="stylesheet" href="../../styles/custom.css">
+  <link rel="stylesheet" href="../../styles/index.css">
 </head>
 
 <body>
-  <!--Barra de navegacion -->
+  <!-- Barra de navegacion -->
   <div id="navbar-container"></div>
   <!-- Script para inyectar la barra de navegacion -->
   <script>
@@ -24,29 +26,28 @@
       .then(data => document.getElementById("navbar-container").innerHTML = data);
     fetch("../../components/footer.html")
       .then(res => res.text())
-      .then(data => document.getElementById("footer-container").innerHTML = data);
+      .then(data => document.getElementById("footer-container").innerHTML = data);     
   </script>
-  <!-- Formulas -->
-  <div class="formula-section mt-5">
-    <h3><i class="bi bi-calculator"></i> Fórmulas</h3>
-    <p>
-      Ejemplos renderizados con KaTeX (local desde npm):
-    </p>
-    <div class="formula-preview">
-      <p>
-        \( a^0 = 1 \) <br>
-        \(a^1 = a \) <br>
-        \( a^m \cdot a^n = a^{m+n} \) <br>
-        \( \frac{a^m}{a^n} = a^{m-n} \) <br>
-        \( (a^m)^n = a^{m \cdot n} \) <br>
-        \( (a \cdot b)^n = a^n \cdot b^n \) <br>
-        \( \left(\frac{a}{b}\right)^n = \frac{a^n}{b^n} \) <br>
-        \( a^{-n} = \frac{1}{a^n} \) <br>
-        \( a^{\frac{m}{n}} = \sqrt[n]{a^m} \) <br>
-      </p>
+
+  <main class="container mt-5">
+    <header class="text-center mb-5">
+      <h1 class="fw-bold display-4">Formulas</h1>
+    </header>
+
+    <!-- Sección de fórmulas -->
+    <div class="formula-section">
+      <h3><i class="bi bi-calculator"></i> Ejemplos con KaTeX</h3>
+      <div class="formula-preview">
+        <p>
+          \( E = mc^2 \) <br>
+          \( \int_0^\infty e^{-x} \, dx = 1 \) <br>
+          \[ \nabla \cdot \vec{E} = \frac{\rho}{\varepsilon_0} \]
+        </p>
+      </div>
     </div>
-  </div>
+  </main>
   <div id="footer-container"></div>
+  <!-- Bootstrap JS -->
   <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

@@ -1,0 +1,47 @@
+body {
+      background: linear-gradient(135deg, #1e1e2f, #3a3a5c);
+      color: white;
+      min-height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    header h1 {
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Tarjeta de menú */
+    .menu-card {
+      background: rgba(102, 16, 242, 0.9);
+      border-radius: 1rem;
+      padding: 2rem;
+      text-align: center;
+      color: white;
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7);
+    }
+
+    .menu-card i {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Sección de fórmulas */
+    .formula-section {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-top: 3rem;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .formula-preview {
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 0.75rem;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
